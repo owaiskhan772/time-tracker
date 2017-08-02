@@ -149,20 +149,20 @@ class Tracker extends React.Component{
             <h2>Ticker</h2>
           </Col>
           <Col xs={12} sm={6} md={4}>
-            <Well><h5>Hours:</h5><p>{ this.setTimer(this.props.items.seconds).hours }</p></Well>
+            <Well bsClass='alert alert-success'><h5>Hours:</h5><h1>{ this.setTimer(this.props.items.seconds).hours }</h1></Well>
           </Col>
           <Col xs={12} sm={6} md={4}>
-            <Well><h5>Minutes:</h5><p>{ this.setTimer(this.props.items.seconds).minutes }</p></Well>
+            <Well bsClass='alert alert-success'><h5>Minutes:</h5><h1>{ this.setTimer(this.props.items.seconds).minutes }</h1></Well>
           </Col>
           <Col xs={12} sm={6} md={4}>
-            <Well><h5>Seconds:</h5><p>{ this.setTimer(this.props.items.seconds).seconds }</p></Well>
+            <Well bsClass='alert alert-success'><h5>Seconds:</h5><h1>{ this.setTimer(this.props.items.seconds).seconds }</h1></Well>
           </Col>
           <input type='hidden' ref='timeElapsedSeconds' value={ this.setTimer(this.props.items.seconds).seconds } />
           <input type='hidden' ref='timeElapsedMinutes' value={ this.setTimer(this.props.items.seconds).minutes } />
           <input type='hidden' ref='timeElapsedHours' value={ this.setTimer(this.props.items.seconds).hours } />
         </Row>
         <Row>
-          <Button bsStyle='default' onClick={ (this.state.timerStart) ? this.openModal.bind(this) : this.handleTimerToggle.bind(this) }>
+          <Button bsStyle='success' onClick={ (this.state.timerStart) ? this.openModal.bind(this) : this.handleTimerToggle.bind(this) }>
             { timerStart && 'Stop timer' }
             { !timerStart && 'Start timer' }
           </Button>
@@ -178,8 +178,8 @@ class Tracker extends React.Component{
             </FormGroup>
           </Modal.Body>
           <Modal.Footer>
-            <Button onClick={ this.saveTag.bind(this) }>Save</Button>
-            <Button onClick={ this.closeModal.bind(this) }>Close</Button>
+            <Button bsStyle='primary' onClick={ this.saveTag.bind(this) }>Save</Button>
+            <Button bsStyle='primary' onClick={ this.closeModal.bind(this) }>Close</Button>
           </Modal.Footer>
         </Modal>
       </Grid>

@@ -11,7 +11,7 @@ const TagItem = ({tagName, timeElapsed}) => {
   });
 
   return(
-    <Well>
+    <Well bsClass='alert alert-warning'>
       <Row>
         <Col xs={12}>
           <p>Tags: { tags }</p>
